@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col col-md-12">
 				<div class="card border-danger mb-3">
-						<div class="card-header bg-transparent border-danger text-danger">Brad <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><strong class="float-right">U$D 200<small> la hora</small> </strong></div>
+						<div class="card-header bg-transparent border-danger text-danger">Brad 	<a class="mypanel"></a><strong class="float-right">U$D 200<small> la hora</small> </strong></div>
 					<div class="card-body">
 						<div class="row">
 							<div class="col text-center">
@@ -73,17 +73,19 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col col-sm-12">
-					<iframe width="100%" src="https://script.google.com/macros/s/AKfycbzwDWOaKCnHUWXulvXD7VcXyW_gj1U8ms0IBTiID94bMHlj0AQ5/exec"></iframe>
-			</div>
-		</div>
+
+    <script>
+    $.getJSON('https://script.google.com/macros/s/AKfycbwz5_FVswl5qeCEvjFf8Rcr4t2KPPfREEIOX-0_tsBEVvk-FB8/exec', function(data) {
+        
+        var text = '<i class="fas fa-star"></i>'.repeat(Math.ceil(parseFloat(`${data}`)))
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
+    
+
 	
-		<div class="row">
-			<div class="col col-sm-12">
-				<iframe width="100%" src="https://script.google.com/macros/s/AKfycbwz5_FVswl5qeCEvjFf8Rcr4t2KPPfREEIOX-0_tsBEVvk-FB8/exec"></iframe>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col">
 				<div class="card-columns">
@@ -106,6 +108,15 @@
 						<img src="imgs/brad/6.jpg" class="card-img-top">
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col col-sm-12">
+				<h1>Comentarios</h1>
+			</div>
+			<div class="col col-sm-12">
+					<iframe width="100%" src="https://script.google.com/macros/s/AKfycbzwDWOaKCnHUWXulvXD7VcXyW_gj1U8ms0IBTiID94bMHlj0AQ5/exec"></iframe>
 			</div>
 		</div>
 
