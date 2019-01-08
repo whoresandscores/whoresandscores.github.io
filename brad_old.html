@@ -10,11 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script>
-	$('#myModal').on('shown.bs.modal', function () {
-		$('#myInput').trigger('focus')
-	  })
-	  </script>
 </head>
 
 <body>
@@ -38,34 +33,30 @@
 		<div class="row">
 			<div class="col col-md-12">
 				<div class="card border-danger mb-3">
-						<div class="card-header bg-transparent border-danger text-danger">
-							<span class="mt-1" style="display:inline-block">Brad 	<a class="mypanel"></a></span>
-							 <a class="btn btn-danger float-right btn-sm text-light m-0 ml-3" data-toggle="modal" data-target="#exampleModal">PUNTUAR!</a>
-							 <strong class="float-right mt-1">U$D 200<small> la hora</small></strong>
-						</div>
+						<div class="card-header bg-transparent border-danger text-danger">Brad 	<a class="mypanel"></a><strong class="float-right">U$D 200<small> la hora</small> </strong></div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-clock mb-2"></i><br>
 								<small>Lun a Sáb<br><small>10 a 19hs</small></small>
 							</div>
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-phone mb-2"></i><br>
 								<small>11-61349767</small>
 							</div>
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-map-marker-alt mb-2"></i><br>
 								<small>Recoleta</small>
 							</div>
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-magic mb-2"></i><br>
 								<small>Escort</small>
 							</div>
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-user mb-2"></i><br>
 								<small>48 años</small>
 							</div>
-							<div class="col col-xs-4 text-center">
+							<div class="col text-center">
 								<i class="fas fa-ruler-vertical mb-2"></i><br>
 								<small>188cm</small>
 							</div>
@@ -82,18 +73,6 @@
 			</div>
 		</div>
 
-
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8pNWgdeZYCG26GXBIwcqaSW3F_pk86B7f13Y5KgweqRL4ww/viewform?embedded=true"
-						width="100%" height="590" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
-				</div>
-			</div>
-		</div>
-		</div>
-	
 
     <script>
     $.getJSON('https://script.google.com/macros/s/AKfycbwz5_FVswl5qeCEvjFf8Rcr4t2KPPfREEIOX-0_tsBEVvk-FB8/exec', function(data) {
@@ -133,35 +112,18 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-12 mt-3">
-				<h3>Comentarios</h1>
+			<div class="col col-sm-12">
+				<h1>Comentarios</h1>
 			</div>
-			<!-- ESTE ES EL COMMENT-->
-			<div class=mycommentpanel></div>
-			<!-- HASTA ACÀ-->
 			<div class="col col-sm-12">
 					<iframe width="100%" src="https://script.google.com/macros/s/AKfycbzwDWOaKCnHUWXulvXD7VcXyW_gj1U8ms0IBTiID94bMHlj0AQ5/exec"></iframe>
 			</div>
 		</div>
 
-
-    <script>
-    $.getJSON('https://script.google.com/macros/s/AKfycbwz5_FVswl5qeCEvjFf8Rcr4t2KPPfREEIOX-0_tsBEVvk-FB8/exec', function(data) {
-    	var commentText = '';
-        for (var i = 0; i < data.length; i++) {
-        	if(data[i][0].length > 0){
-		        commentText = commentText + '<div class="col-md-6 mb-3"><small>';
-		        commentText = commentText + '${data[i][0]}';
-		        commentText = commentText + '</small><span class="badge badge-pill badge-warning float-right">';
-		        commentText = commentText + '<i class="fas fa-star"></i>'.repeat(Math.ceil(parseFloat(`${data[i][1]}`)));
-		        commentText = commentText + '</span><hr class="border-danger mt-1 mb-2"><p>';
-		        commentText = commentText + '${data[i][2]}' + '</p></div>';                    
-
-		    }
-        }
-        $(".mypanel").html(commentText);
-    });
-    </script>
+		<div>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8pNWgdeZYCG26GXBIwcqaSW3F_pk86B7f13Y5KgweqRL4ww/viewform?embedded=true"
+			 width="100%" height="628" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+		</div>
 
 </body>
 
