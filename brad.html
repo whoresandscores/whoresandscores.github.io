@@ -136,30 +136,31 @@
 			<div class="col-md-12 mt-3">
 				<h3>Comentarios</h1>
 			</div>
+
 			<!-- ESTE ES EL COMMENT-->
-			<div class=mycommentpanel></div>
+			<div class="col-md-12 mt-3 mycommentpanel"></div>
 			<!-- HASTA ACÀ-->
-			<div class="col col-sm-12">
-					<iframe width="100%" src="https://script.google.com/macros/s/AKfycbzwDWOaKCnHUWXulvXD7VcXyW_gj1U8ms0IBTiID94bMHlj0AQ5/exec"></iframe>
-			</div>
 		</div>
 
 
     <script>
-    $.getJSON('https://script.google.com/macros/s/AKfycbwz5_FVswl5qeCEvjFf8Rcr4t2KPPfREEIOX-0_tsBEVvk-FB8/exec', function(data) {
+    $.getJSON('https://script.google.com/macros/s/AKfycbzwDWOaKCnHUWXulvXD7VcXyW_gj1U8ms0IBTiID94bMHlj0AQ5/exec', function(data) {
     	var commentText = '';
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 1; i < data.length; i++) {
         	if(data[i][0].length > 0){
 		        commentText = commentText + '<div class="col-md-6 mb-3"><small>';
-		        commentText = commentText + '${data[i][0]}';
+		        commentText = commentText + `${data[i][0]}`.substring(0, 10);
 		        commentText = commentText + '</small><span class="badge badge-pill badge-warning float-right">';
 		        commentText = commentText + '<i class="fas fa-star"></i>'.repeat(Math.ceil(parseFloat(`${data[i][1]}`)));
 		        commentText = commentText + '</span><hr class="border-danger mt-1 mb-2"><p>';
-		        commentText = commentText + '${data[i][2]}' + '</p></div>';                    
-
+		        if(data[i][2].length > 0){
+		        commentText = commentText + `${data[i][2]}` + '</p></div>'; 
+		    	} else {
+		        commentText = commentText + `Comentario vacío.` + '</p></div>';
+		    	}                
 		    }
         }
-        $(".mypanel").html(commentText);
+        $(".mycommentpanel").html(commentText);
     });
     </script>
 
